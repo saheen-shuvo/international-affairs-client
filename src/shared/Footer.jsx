@@ -1,4 +1,4 @@
-import {  FaFacebookF, FaLink } from "react-icons/fa";
+import { FaFacebookF, FaLink } from "react-icons/fa";
 import iaLogo from "../assets/images/ia_logo.png";
 import { IoIosMail } from "react-icons/io";
 import { MdAddIcCall } from "react-icons/md";
@@ -9,17 +9,17 @@ const Footer = () => {
       <footer className="footer sm:footer-horizontal bg-[#1A1766] text-white p-10">
         <nav>
           <h6 className="footer-title">Get Connected</h6>
-          <a className="link link-hover">Contact</a>
+          <a className="link link-hover">Contact Us</a>
           <a className="link link-hover">Meet With Us</a>
-          <a className="link link-hover">Newsletter</a>
+          <a className="link link-hover">View Newsletter</a>
           <a className="link link-hover">Location Map</a>
-          <a className="link link-hover">Policy</a>
+          <a className="link link-hover">Student Policy</a>
           <a className="link link-hover">Report Us</a>
         </nav>
         <nav>
           <h6 className="footer-title">Useful Links</h6>
           <a className="link link-hover">Membership</a>
-          <a className="link link-hover">Partners</a>
+          <a className="link link-hover">View Partners</a>
           <a className="link link-hover">International Events</a>
           <a className="link link-hover">International MoU</a>
           <a className="link link-hover">International Exhibition</a>
@@ -46,10 +46,10 @@ const Footer = () => {
               <IoIosMail />
             </a>
             <a className="text-[23px]">
-            <MdAddIcCall />
+              <MdAddIcCall />
             </a>
             <a className="text-[20px]">
-            <FaLink />
+              <FaLink />
             </a>
           </div>
         </nav>
@@ -60,7 +60,8 @@ const Footer = () => {
           <p>
             International Affairs, DIU
             <br />
-            Your Gateway to Global Opportunities
+            International Affairs Office, Knowledge Tower, 1st Floor, Daffodil
+            International University (DIU)
           </p>
         </aside>
       </footer>
