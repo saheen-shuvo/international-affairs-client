@@ -5,7 +5,7 @@ import { MdAddIcCall } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="mt-8 md:mt-16">
       <footer className="footer sm:footer-horizontal bg-[#1A1766] text-white p-10">
         <nav>
           <h6 className="footer-title">Get Connected</h6>
