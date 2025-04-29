@@ -4,9 +4,9 @@ const AboutUs = () => {
   return (
     <div id="about-us" className="max-w-screen-xl mx-auto mt-8 md:mt-16 scroll-mt-24">
       <section id="about-us" class="">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto text-center">
           <h2 class="text-4xl font-bold mb-4 text-gray-800">ABOUT US</h2>
-          <p class="text-xs lg:text-lg text-gray-800 mb-6 text-center px-2 md:px-8 lg:px-16">
+          <p class="text-xs lg:text-lg text-gray-800 mb-6 text-center px-4 md:px-8 lg:px-16">
             Daffodil International University (DIU) has made an effort to
             increase its visibility and mobility around the world by building
             strong partnerships with international universities. DIU has
@@ -19,7 +19,7 @@ const AboutUs = () => {
             Erasmus+ projects, virtual mobility, research collaborations,
             short-term training programs, etc.
           </p>
-          <div class="flex justify-center flex-col lg:flex-row gap-4">
+          <div class="flex justify-center flex-col lg:flex-row gap-4 mx-2">
             <div className="card flex-1 bg-base-100 image-full shadow-sm">
               <figure className="w-full h-64 overflow-hidden">
                 <img
