@@ -6,12 +6,11 @@ import { FaClock, FaSearch } from "react-icons/fa";
 const Programs = () => {
   return (
     <div className="max-w-screen-xl mx-auto mt-8 md:mt-16">
-      <h2 class="text-4xl font-bold mb-4 text-gray-800 text-center">
+      <h2 class="text-2xl lg:text-4xl font-bold mb-2 text-gray-800 text-center">
         Global Opportunities Await
       </h2>
-      <p className="text-center text-gray-600 mb-8">
-        Discover academic and cultural experiences beyond borders through our
-        global programs.
+      <p className="text-xs lg:text-sm text-center text-gray-600 mb-8">
+        Discover academic and cultural experiences beyond borders
       </p>
       <div className="flex flex-col lg:flex-row gap-4 mx-2">
         {/* Card1 */}
@@ -105,6 +104,11 @@ const Programs = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center">
+        <button className="btn btn-primary mt-6 text-white border-white border-0 border-b-2">
+          View All Programs
+        </button>
       </div>
     </div>
   );

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Professor Dr. Md. Fokhray Hossain",
+    "position": "Director of International Affairs",
+    "department": "Daffodil International University",
+    "email": "international@daffodilvarsity.edu.bd",
+    "phone": "+8801713493250, 01896034247",
+    "img": "img1.png"
+  },
+  {
+    "id": 2,
+    "name": "Mr. Syed Raihan-Ul-Islam",
+    "position": "Deputy Director",
+    "department": "International Affairs, Daffodil International University",
+    "email": "int@daffodilvarsity.edu.bd",
+    "phone": "+8801811458865",
+    "img": "img2.png"
+  },
+  {
+    "id": 3,
+    "name": "Mr. Md. Nazmul Islam",
+    "position": "Senior Administrative Officer",
+    "department": "International Affairs, Daffodil International University",
+    "email": "mobility@daffodilvarsity.edu.bd",
+    "phone": "+8801847334763",
+    "img": "img3.png"
+  },
+  {
+    "id": 4,
+    "name": "Mr. Shouvik Roy Snigdha",
+    "position": "Administrative Officer",
+    "department": "International Affairs, Daffodil International University",
+    "email": "int.study@daffodilvarsity.edu.bd",
+    "phone": "+8801811458854",
+    "img": "img4.png"
+  },
+  {
+    "id": 5,
+    "name": "Mr. Md. Lazminur Alam",
+    "position": "Senior Assistant Director",
+    "department": "Daffodil International University",
+    "email": "lazminur@daffodilvarsity.edu.bd",
+    "phone": "+8801713493051",
+    "img": "img5.png"
+  },
+  {
+    "id": 6,
+    "name": "Mr. Md. Faruque Miah",
+    "position": "Assistant Director",
+    "department": "Daffodil International University",
+    "email": "counselor10@daffodilvarsity.edu.bd",
+    "phone": "+8801847027527",
+    "img": "img6.png"
+  }
+]
