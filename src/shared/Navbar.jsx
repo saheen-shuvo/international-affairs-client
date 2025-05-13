@@ -25,7 +25,7 @@ const Navbar = () => {
         <NavLink to="/d">Programs & Exchanges</NavLink>
       </li>
       <li className="font-semibold">
-        <NavLink to="/j">Partner Universities</NavLink>
+        <NavLink to="/partner-universities">Partner Universities</NavLink>
       </li>
       <li className="font-semibold">
         <NavLink to="/k">Events</NavLink>
