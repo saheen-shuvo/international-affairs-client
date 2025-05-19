@@ -1,8 +1,12 @@
 // import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import iaLogo from "../assets/images/ia_logo.png"
+import { Link, NavLink } from "react-router-dom";
+import iaLogo from "../assets/images/ia_logo.png";
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext/AuthContext";
+import { MdLogout } from "react-icons/md";
 
 const Navbar = () => {
+  const { user, signOutUser } = useContext(AuthContext);
   // const [theme, setTheme] = useState(
   //   localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   // );
@@ -19,16 +23,63 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li className="font-semibold">
-        <a href="#about-us">About Us</a>
-      </li>
-      <li className="font-semibold">
-        <NavLink to="/d">Programs & Exchanges</NavLink>
+        <details>
+          <summary>Programs & Exchanges</summary>
+          <ul className="p-2 bg-base-100 text-black rounded-md w-72">
+            <li>
+              <NavLink to="/erasmus-exchange">Erasmus+ Exchange</NavLink>
+            </li>
+            <li>
+              <NavLink to="/semester-exchange">Semester Exchange</NavLink>
+            </li>
+            <li>
+              <NavLink to="/short-programs">Short Programs</NavLink>
+            </li>
+            <li>
+              <NavLink to="/short-programs">APSP 2025</NavLink>
+            </li>
+            <li>
+              <NavLink to="/short-programs">APFDP 2025</NavLink>
+            </li>
+            <li>
+              <NavLink to="/short-programs">
+                Volunteer Internship Program (VIP)
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/short-programs">
+                International Internship Program (IIP)
+              </NavLink>
+            </li>
+          </ul>
+        </details>
       </li>
       <li className="font-semibold">
         <NavLink to="/partner-universities">Partner Universities</NavLink>
       </li>
       <li className="font-semibold">
-        <NavLink to="/k">Events</NavLink>
+        <details>
+          <summary>Events</summary>
+          <ul className="p-2 bg-base-100 text-black rounded-md w-72">
+            <li>
+              <NavLink to="/erasmus-exchange">
+                International Conferences
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/semester-exchange">Harmony Project</NavLink>
+            </li>
+            <li>
+              <NavLink to="/short-programs">International MoU</NavLink>
+            </li>
+            <li>
+              <NavLink to="/short-programs">Virtual Photo Exhibition</NavLink>
+            </li>
+            <li>
+              <NavLink to="/short-programs">International Events</NavLink>
+            </li>
+          </ul>
+        </details>
       </li>
       <li className="font-semibold">
         <NavLink to="/contacts">Contacts</NavLink>
@@ -44,11 +95,25 @@ const Navbar = () => {
   //   }
   // };
 
+  const handleSignOut = () => {
+    signOutUser()
+      .then(() => {
+        console.log("Successfully signed out");
+      })
+      .catch((error) => {
+        console.log("Signout error", error);
+      });
+  };
+
   return (
     <div className="navbar fixed z-10 bg-opacity-30  bg-[#272284] lg:px-4">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost lg:hidden text-white"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -84,7 +149,46 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 text-white">{links}</ul>
       </div>
       <div className="navbar-end">
-      <button className='btn btn-primary btn-sm text-white border-white border-0 border-b-2'>Explore Now</button>
+        {user ? (
+          <div className="dropdown dropdown-end px-2">
+            <div tabIndex={0} role="button" className="">
+              <img
+                className="w-8 h-8 lg:w-10 lg:h-10 object-cover rounded-full"
+                src={
+                  user.photoURL || "https://i.ibb.co.com/5xJdrpvg/images.png"
+                }
+                alt="User Avatar"
+              />
+            </div>
+            <div
+              tabIndex={0}
+              className="dropdown-content w-48  bg-base-100 z-[1] p-2 shadow rounded-lg "
+            >
+              <div className="">
+                <h3 className="font-semibold text-center">
+                  {user.displayName || "Unknown User"}
+                </h3>
+                <div className="flex justify-center">
+                  <button
+                    onClick={handleSignOut}
+                    className="btn btn-sm bg-[#757ce1] border-0 text-white border-b-4 border-[#0076b6af] flex items-center gap-2 w-24 my-2"
+                  >
+                    <MdLogout /> <span>Log out</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <>
+            <Link to="/signin">
+              {" "}
+              <button className="btn  btn-sm bg-[#757ce1] hover:bg-[#4d5191] hover:text-white text-white border-white border-0 border-b-2">
+                Sign in
+              </button>
+            </Link>
+          </>
+        )}
       </div>
       {/* Dark - Light Mode */}
       {/* <label className="swap swap-rotate">
