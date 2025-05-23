@@ -6,6 +6,7 @@ import PartnerUniversities from "../pages/partnerUniversities/PartnerUniversitie
 import ErasmusExchange from "../pages/erasmus+/ErasmusExchange";
 import SignIn from "../pages/signin/SignIn";
 import Register from "../pages/register/Register";
+import ErasmusExchangeDetails from "../pages/erasmus+/ErasmusExchangeDetails";
 
 export const router = createBrowserRouter([
   {
@@ -33,8 +34,12 @@ export const router = createBrowserRouter([
         element: <PartnerUniversities></PartnerUniversities>,
       },
       {
-        path: "/erasmus-exchange",
+        path: "/erasmus-exchanges",
         element: <ErasmusExchange></ErasmusExchange>,
+      },
+      {
+        path: "/erasmus-exchanges/:id",
+        element: <ErasmusExchangeDetails></ErasmusExchangeDetails>,
       },
     ],
   },

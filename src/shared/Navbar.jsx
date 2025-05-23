@@ -27,7 +27,7 @@ const Navbar = () => {
           <summary>Programs & Exchanges</summary>
           <ul className="p-2 bg-base-100 text-black rounded-md w-72">
             <li>
-              <NavLink to="/erasmus-exchange">Erasmus+ Exchange</NavLink>
+              <NavLink to="/erasmus-exchanges">Erasmus+ Exchange</NavLink>
             </li>
             <li>
               <NavLink to="/semester-exchange">Semester Exchange</NavLink>
