@@ -3,10 +3,10 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../pages/home/Home";
 import Contacts from "../pages/contacts/Contacts";
 import PartnerUniversities from "../pages/partnerUniversities/PartnerUniversities";
-import ErasmusExchange from "../pages/erasmus+/ErasmusExchange";
 import SignIn from "../pages/signin/SignIn";
 import Register from "../pages/register/Register";
-import ErasmusExchangeDetails from "../pages/erasmus+/ErasmusExchangeDetails";
+import ErasmusExchangeDetails from "../pages/exchangePrograms/ExchangeProgramDetails";
+import ExchangeProgram from "../pages/exchangePrograms/ExchangePrograms";
 
 export const router = createBrowserRouter([
   {
@@ -34,11 +34,15 @@ export const router = createBrowserRouter([
         element: <PartnerUniversities></PartnerUniversities>,
       },
       {
-        path: "/erasmus-exchanges",
-        element: <ErasmusExchange></ErasmusExchange>,
+        path: "/programs-exchanges/:programType",
+        element: <ExchangeProgram></ExchangeProgram>,
       },
       {
-        path: "/erasmus-exchanges/:id",
+        path: "/programs-exchanges/:programType",
+        element: <ExchangeProgram></ExchangeProgram>,
+      },
+      {
+        path: "/programs-exchanges/:programType/:id",
         element: <ErasmusExchangeDetails></ErasmusExchangeDetails>,
       },
     ],

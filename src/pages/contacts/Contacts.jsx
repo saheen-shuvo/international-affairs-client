@@ -120,7 +120,7 @@ const Contacts = () => {
           ))}
         </div>
         <div className="grid gap-4">
-          <h1 className="font-semibold text-lg mt-4 text-center">International Affairs</h1>
+          <h1 className="font-semibold text-lg mt-4 text-center">International Admission</h1>
           {contactsData.slice(4, 6).map((contact) => (
             <motion.div
               initial={{ opacity: 0, scale: 0.7, y: 50 }}

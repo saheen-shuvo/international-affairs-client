@@ -27,19 +27,30 @@ const Navbar = () => {
           <summary>Programs & Exchanges</summary>
           <ul className="p-2 bg-base-100 text-black rounded-md w-72">
             <li>
-              <NavLink to="/erasmus-exchanges">Erasmus+ Exchange</NavLink>
+              <NavLink to="/programs-exchanges/erasmus">
+                Erasmus+ Exchange
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/semester-exchange">Semester Exchange</NavLink>
+              <NavLink to="/programs-exchanges/semester">
+                Semester Exchange
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/short-programs">Short Programs</NavLink>
+              <NavLink to="/programs-exchanges/short">Short Programs</NavLink>
             </li>
             <li>
-              <NavLink to="/short-programs">APSP 2025</NavLink>
+              <NavLink to="https://apsp.daffodilvarsity.edu.bd" target="_blank">
+                APSP 2025
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/short-programs">APFDP 2025</NavLink>
+              <NavLink
+                to="https://apfdp.daffodilvarsity.edu.bd"
+                target="_blank"
+              >
+                APFDP 2025
+              </NavLink>
             </li>
             <li>
               <NavLink to="/short-programs">
