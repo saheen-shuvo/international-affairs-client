@@ -1,11 +1,13 @@
 // import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import iaLogo from "../assets/images/ia_logo.png";
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import AuthContext from "../context/AuthContext/AuthContext";
 import { MdLogout } from "react-icons/md";
+import "./navbar.css";
 
 const Navbar = () => {
+  const detailsRefs = useRef([]);
   const { user, signOutUser } = useContext(AuthContext);
   // const [theme, setTheme] = useState(
   //   localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
@@ -17,13 +19,29 @@ const Navbar = () => {
   //   document.querySelector("html").setAttribute("data-theme", localTheme);
   // }, [theme]);
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      // For each details ref, close if clicked outside
+      detailsRefs.current.forEach((detailsEl) => {
+        if (detailsEl && !detailsEl.contains(event.target)) {
+          detailsEl.removeAttribute("open");
+        }
+      });
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const links = (
     <>
       <li className="font-semibold">
         <NavLink to="/">Home</NavLink>
       </li>
       <li className="font-semibold">
-        <details>
+        <details ref={(el) => (detailsRefs.current[0] = el)}>
           <summary>Programs & Exchanges</summary>
           <ul className="p-2 bg-base-100 text-black rounded-md w-72">
             <li>
@@ -69,7 +87,7 @@ const Navbar = () => {
         <NavLink to="/partner-universities">Partner Universities</NavLink>
       </li>
       <li className="font-semibold">
-        <details>
+        <details ref={(el) => (detailsRefs.current[1] = el)}>
           <summary>Events</summary>
           <ul className="p-2 bg-base-100 text-black rounded-md w-72">
             <li>
@@ -142,7 +160,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-80 p-2 shadow"
           >
             {links}
           </ul>

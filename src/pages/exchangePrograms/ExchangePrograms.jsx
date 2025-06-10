@@ -62,15 +62,15 @@ const ExchangeProgram = () => {
       <div className="flex flex-col gap-4">
         {exchangePrograms.map((program, idx) => (
           <div key={program._id} className="p-4 bg-base-200 rounded-2xl">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-wrap justify-between items-center gap-2">
+              <div className="flex items-center gap-2 flex-1 min-w-0 text-xs md:text-base">
                 <span className="font-semibold">{idx + 1}.</span>
-                <span className="font-semibold">{program.title}</span>
+                <span className="font-semibold truncate">{program.title}</span>
               </div>
-              <div className="flex gap-2">
+              <div>
                 <button
                   onClick={() => handleViewDetails(program._id)}
-                  className="btn btn-primary btn-sm"
+                  className="btn btn-primary btn-xs md:btn-sm"
                 >
                   View Details
                 </button>
