@@ -7,6 +7,8 @@ import SignIn from "../pages/signin/SignIn";
 import Register from "../pages/register/Register";
 import ErasmusExchangeDetails from "../pages/exchangePrograms/ExchangeProgramDetails";
 import ExchangeProgram from "../pages/exchangePrograms/ExchangePrograms";
+import Vip from "../pages/vip/Vip";
+import Vip2025Details from "../pages/vip/Vip2025Details";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +46,14 @@ export const router = createBrowserRouter([
       {
         path: "/programs-exchanges/:programType/:id",
         element: <ErasmusExchangeDetails></ErasmusExchangeDetails>,
+      },
+      {
+        path: "/vip",
+        element: <Vip></Vip>
+      },
+      {
+        path: "/vip/vip2025details",
+        element: <Vip2025Details></Vip2025Details>
       },
     ],
   },

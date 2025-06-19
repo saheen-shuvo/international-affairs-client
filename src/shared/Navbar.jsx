@@ -71,7 +71,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/short-programs">
+              <NavLink to="/vip">
                 Volunteer Internship Program (VIP)
               </NavLink>
             </li>
