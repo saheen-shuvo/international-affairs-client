@@ -9,6 +9,8 @@ import ErasmusExchangeDetails from "../pages/exchangePrograms/ExchangeProgramDet
 import ExchangeProgram from "../pages/exchangePrograms/ExchangePrograms";
 import Vip from "../pages/vip/Vip";
 import Vip2025Details from "../pages/vip/Vip2025Details";
+import Iip from "../pages/iip/Iip";
+import Iip2025Details from "../pages/iip/Iip2025Details";
 
 export const router = createBrowserRouter([
   {
@@ -54,6 +56,14 @@ export const router = createBrowserRouter([
       {
         path: "/vip/vip2025details",
         element: <Vip2025Details></Vip2025Details>
+      },
+      {
+        path: "/iip",
+        element: <Iip></Iip>
+      },
+      {
+        path: "/iip/iip2025details",
+        element: <Iip2025Details></Iip2025Details>
       },
     ],
   },

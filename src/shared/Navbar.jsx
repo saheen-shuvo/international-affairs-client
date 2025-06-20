@@ -76,7 +76,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/short-programs">
+              <NavLink to="/iip">
                 International Internship Program (IIP)
               </NavLink>
             </li>

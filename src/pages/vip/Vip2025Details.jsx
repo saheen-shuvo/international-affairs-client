@@ -88,7 +88,7 @@ const Vip2025Details = () => {
           <div className="bg-base-100 p-6 shadow-lg rounded-2xl">
             <img className="w-48 mx-auto" src={tasfiaVipImg} alt="" />
             <div className="text-center py-2">
-              <h1>Tasfia Rahman</h1>
+              <h1 className="font-semibold">Tasfia Rahman</h1>
               <h1>VIP - S2</h1>
               <h1>Daffodil Smart City (DSC), Birulia, Savar, Dhaka-1216</h1>
             </div>
@@ -109,7 +109,7 @@ const Vip2025Details = () => {
           <div className="bg-base-100 p-6 shadow-lg rounded-2xl">
             <img className="w-48 mx-auto" src={shakhawatVipImg} alt="" />
             <div className="text-center py-2">
-              <h1>Md Shakawat Hossen</h1>
+              <h1 className="font-semibold">Md Shakawat Hossen</h1>
               <h1>VIP - S3</h1>
               <h1>Daffodil Smart City (DSC), Birulia, Savar, Dhaka-1216</h1>
             </div>
