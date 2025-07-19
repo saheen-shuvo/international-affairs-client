@@ -5,9 +5,9 @@ import Contacts from "../pages/contacts/Contacts";
 import PartnerUniversities from "../pages/partnerUniversities/PartnerUniversities";
 import SignIn from "../pages/signin/SignIn";
 import Register from "../pages/register/Register";
-import ErasmusExchangeDetails from "../pages/exchangePrograms/ExchangeProgramDetails";
 import ExchangeProgram from "../pages/exchangePrograms/ExchangePrograms";
 import Vip from "../pages/vip/Vip";
+import ExchangeProgramDetails from "../pages/exchangePrograms/ExchangeProgramDetails"
 import Vip2025Details from "../pages/vip/Vip2025Details";
 import Iip from "../pages/iip/Iip";
 import Iip2025Details from "../pages/iip/Iip2025Details";
@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/programs-exchanges/:programType/:id",
-        element: <ErasmusExchangeDetails></ErasmusExchangeDetails>,
+        element: <ExchangeProgramDetails></ExchangeProgramDetails>,
       },
       {
         path: "/vip",

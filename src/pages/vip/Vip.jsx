@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import vipImg from "../../assets/images/authImg/vip2025.png";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
 const Vip = () => {
   return (
-    <div className="mt-20 max-w-screen-xl mx-auto px-4">
+    <motion.div className="mt-20 max-w-screen-xl mx-auto px-4">
       <h2 className="text-2xl lg:text-4xl font-bold mb-2 text-gray-800 text-center pt-2 lg:pt-4">
         Volunteer Internship Program
       </h2>
@@ -11,7 +14,16 @@ const Vip = () => {
       </p>
       <div className="pt-2 lg:pt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {/* Card1 */}
-        <div className="card bg-base-100 shadow-sm">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.7, y: 50 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.05 }}
+          transition={{
+            duration: 1.2,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="card bg-base-100 shadow-sm"
+        >
           <figure>
             <img src={vipImg} alt="vip2025" />
           </figure>
@@ -23,17 +35,16 @@ const Vip = () => {
               skills, and make a real impact one project at a time.
             </p>
             <div className="card-actions justify-end">
-              <Link to='/vip/vip2025details'>
+              <Link to="/vip/vip2025details">
                 <button className="btn btn-primary btn-xs md:btn-sm">
                   View Details
                 </button>
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-
-    </div>
+    </motion.div>
   );
 };
 

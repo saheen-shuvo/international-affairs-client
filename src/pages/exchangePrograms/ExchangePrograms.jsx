@@ -1,6 +1,10 @@
 import { useNavigate, useParams } from "react-router-dom";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
+import loadingAnimation from "../../../public/Loading_Animation.json";
+import Lottie from "lottie-react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 const ExchangeProgram = () => {
   const axiosPublic = useAxiosPublic();
@@ -58,27 +62,50 @@ const ExchangeProgram = () => {
       <p className="text-xs lg:text-sm text-center text-gray-600 mb-8">
         {subtitle}
       </p>
-      {/* CARD */}
-      <div className="flex flex-col gap-4">
-        {exchangePrograms.map((program, idx) => (
-          <div key={program._id} className="p-4 bg-base-200 rounded-2xl">
-            <div className="flex flex-wrap justify-between items-center gap-2">
-              <div className="flex items-center gap-2 flex-1 min-w-0 text-xs md:text-base">
-                <span className="font-semibold">{idx + 1}.</span>
-                <span className="font-semibold truncate">{program.title}</span>
-              </div>
-              <div>
-                <button
-                  onClick={() => handleViewDetails(program._id)}
-                  className="btn btn-primary btn-xs md:btn-sm"
-                >
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      {isLoading ? (
+        <div className="flex justify-center items-center py-28">
+          <Lottie
+            animationData={loadingAnimation}
+            loop={true}
+            className="w-16 lg:w-24 h-16 lg:h-24"
+          />
+        </div>
+      ) : (
+        <div className="flex flex-col gap-4">
+          {exchangePrograms.map((program, idx) => (
+            <motion.div
+              key={program._id}
+              className="p-4 bg-base-200 rounded-2xl"
+            >
+              <motion.div
+                key={program._id}
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: idx * 0.2, // stagger by index
+                }}
+                className="flex flex-wrap justify-between items-center gap-2"
+              >
+                <div className="flex items-center gap-2 flex-1 min-w-0 text-xs md:text-base">
+                  <span className="font-semibold">{idx + 1}.</span>
+                  <span className="font-semibold truncate">
+                    {program.title}
+                  </span>
+                </div>
+                <div>
+                  <button
+                    onClick={() => handleViewDetails(program._id)}
+                    className="btn btn-primary btn-xs md:btn-sm"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

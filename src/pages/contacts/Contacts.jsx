@@ -5,6 +5,7 @@ import img3 from "../../assets/images/contactsImg/img3.png";
 import img4 from "../../assets/images/contactsImg/img4.png";
 import img5 from "../../assets/images/contactsImg/img5.png";
 import img6 from "../../assets/images/contactsImg/img6.png";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 const imageMap = {
   "img1.png": img1,

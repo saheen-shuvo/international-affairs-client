@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import iipImg from "../../assets/images/authImg/iip2025.png";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 const Iip = () => {
   return (
@@ -12,9 +14,22 @@ const Iip = () => {
       </p>
       <div className="pt-2 lg:pt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {/* Card1 */}
-        <div className="card bg-base-100 shadow-sm">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.7, y: 50 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.05 }}
+          transition={{
+            duration: 1.2,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="card bg-base-100 shadow-sm"
+        >
           <figure>
-            <img className="h-68 object-cover w-full" src={iipImg} alt="vip2025" />
+            <img
+              className="h-68 object-cover w-full"
+              src={iipImg}
+              alt="vip2025"
+            />
           </figure>
           <div className="card-body">
             <h2 className="card-title">IIP 2025</h2>
@@ -32,7 +47,7 @@ const Iip = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
