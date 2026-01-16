@@ -5,7 +5,7 @@ import { FaClock, FaSearch } from "react-icons/fa";
 
 const Programs = () => {
   return (
-    <div className="max-w-screen-xl mx-auto mt-8 md:mt-16">
+    <div id="global" className="max-w-screen-xl mx-auto mt-8 md:mt-16">
       <h2 class="text-2xl lg:text-4xl font-bold mb-2 text-gray-800 text-center">
         Global Opportunities Await
       </h2>

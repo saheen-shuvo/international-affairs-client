@@ -135,7 +135,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar fixed z-10 bg-opacity-30  bg-[#272284] lg:px-4">
+    <div className="navbar fixed z-90 bg-opacity-30  bg-[#272284] lg:px-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div
@@ -212,7 +212,7 @@ const Navbar = () => {
           <>
             <Link to="/signin">
               {" "}
-              <button className="btn  btn-sm bg-[#757ce1] hover:bg-[#4d5191] hover:text-white text-white border-white border-0 border-b-2">
+              <button className="btn  btn-sm bg-blue-500 hover:bg-blue-600 text-white border-white border-0 border-b-2">
                 Sign in
               </button>
             </Link>
