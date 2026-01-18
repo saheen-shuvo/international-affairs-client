@@ -56,7 +56,7 @@ const Footer = () => {
       </footer>
       <footer className="footer bg-[#1A1766]  text-white border-base-300 border-t px-10 py-4">
         <aside className="grid-flow-col items-center">
-          <img className="w-7 mr-2" src={iaLogo} alt="" />
+          <img className="w-10 mr-2" src={iaLogo} alt="" />
           <p>
             International Affairs, DIU
             <br />

@@ -169,7 +169,7 @@ const Navbar = () => {
           <p className="text-xl font-bold text-green-800"></p>
           <Link to="/"  className="text-sm md:text-lg font-bold  text-[white] flex items-center">
             {" "}
-            <img className="w-7 mr-2" src={iaLogo} alt="" />
+            <img className="w-10 mr-2" src={iaLogo} alt="" />
             International Affairs, DIU
           </Link>
         </div>

@@ -18,7 +18,7 @@ const imageMap = {
 const Contacts = () => {
   return (
     <div className="mt-20 max-w-screen-xl mx-auto px-4">
-      <h2 class="text-2xl lg:text-4xl font-bold mb-2 text-gray-800 text-center pt-2 lg:pt-4">
+      <h2 className="text-2xl lg:text-4xl font-bold mb-2 text-gray-800 text-center pt-2 lg:pt-4">
         International Contacts
       </h2>
       <p className="text-xs lg:text-sm text-center text-gray-600 mb-8">
@@ -47,9 +47,11 @@ const Contacts = () => {
             </div>
             <div className="flex flex-col justify-center">
               <h1 className="font-semibold text-base lg:text-lg">
-                {contact.name}
+                {contact.name} 
               </h1>
-              <h1 className="text-sm lg:text-base">{contact.position}</h1>
+              <h1 className="text-sm lg:text-base font-medium text-blue-900">
+                {contact.position}
+              </h1>
               {contact.department.split(", ").map((line, index) => (
                 <h1 className="text-sm lg:text-base" key={index}>
                   {line}
@@ -73,7 +75,9 @@ const Contacts = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
         <div className="grid gap-4">
-          <h1 className="font-semibold text-lg mt-4 text-center">International Affairs</h1>
+          <h1 className="font-semibold text-lg mt-4 text-center">
+            International Affairs
+          </h1>
           {contactsData.slice(1, 4).map((contact) => (
             <motion.div
               initial={{ opacity: 0, scale: 0.7, y: 50 }}
@@ -98,7 +102,9 @@ const Contacts = () => {
                 <h1 className="font-semibold text-base lg:text-lg">
                   {contact.name}
                 </h1>
-                <h1 className="text-sm lg:text-base">{contact.position}</h1>
+                <h1 className="text-sm lg:text-base text-blue-900 font-medium">
+                  {contact.position}
+                </h1>
                 {contact.department.split(", ").map((line, index) => (
                   <h1 className="text-sm lg:text-base" key={index}>
                     {line}
@@ -121,7 +127,9 @@ const Contacts = () => {
           ))}
         </div>
         <div className="grid gap-4">
-          <h1 className="font-semibold text-lg mt-4 text-center">International Admission</h1>
+          <h1 className="font-semibold text-lg mt-4 text-center">
+            International Admission
+          </h1>
           {contactsData.slice(4, 6).map((contact) => (
             <motion.div
               initial={{ opacity: 0, scale: 0.7, y: 50 }}
