@@ -73,6 +73,7 @@ const Contacts = () => {
           </motion.div>
         ))}
       </div>
+      {/* 2nd part */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
         <div className="grid gap-4">
           <h1 className="font-semibold text-lg mt-4 text-center">
