@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import iaLogo from "../assets/images/ia_logo.png";
+import iaLogo from "../assets/images/logo/diu-logo.png";
 import { useContext, useEffect, useRef } from "react";
 import AuthContext from "../context/AuthContext/AuthContext";
 import { MdLogout } from "react-icons/md";
@@ -169,7 +169,7 @@ const Navbar = () => {
           <p className="text-xl font-bold text-green-800"></p>
           <Link to="/"  className="text-sm md:text-lg font-bold  text-[white] flex items-center">
             {" "}
-            <img className="w-10 mr-2" src={iaLogo} alt="" />
+            <img className="w-8 mr-2" src={iaLogo} alt="" />
             International Affairs, DIU
           </Link>
         </div>

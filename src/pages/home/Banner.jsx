@@ -1,40 +1,49 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { ChevronDown, ArrowRight } from "lucide-react";
-import heroBg from "../../assets/images/Banner/ia_banner.jpg";
+import { ChevronDown } from "lucide-react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import { Autoplay, EffectFade } from "swiper/modules";
+
+import hero1 from "../../assets/images/Banner/ia_banner.jpg";
+import hero2 from "../../assets/images/ia-card-1.jpg";
+import hero3 from "../../assets/images/ia-card-2.jpg";
 
 const Banner = () => {
   const scrollToAbout = () => {
     const section = document.getElementById("about-us");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
-  const scrollToGlobal = () => {
-    const section = document.getElementById("global");
-    if (section) {
-      const yOffset = -80;
-      const y =
-        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  };
+  const slides = [hero1, hero2, hero3];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
+      <div className="absolute inset-0 -z-10">
+        <Swiper
+          modules={[Autoplay, EffectFade]}
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          loop
+          allowTouchMove={false}
+          className="h-full w-full"
+        >
+          {slides.map((img, i) => (
+            <SwiperSlide key={i}>
+              <div
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${img})` }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
-{/* Dark Overlay – dual diagonal gradient */}
-<div className="absolute inset-0 bg-[linear-gradient(to_bottom_left,rgba(0,0,0,0.5),rgba(30,58,138,0.6),rgba(0,0,0,0.5)),linear-gradient(to_top_right,rgba(0,0,0,0.5),rgba(30,58,138,0.6),rgba(0,0,0,0.5))]" />
+      <div className="absolute inset-0 bg-[#002652]/80" />
 
-
-      {/* Mesh Pattern */}
       <div
         className="absolute inset-0 opacity-40"
         style={{
@@ -46,7 +55,6 @@ const Banner = () => {
         }}
       />
 
-      {/* Floating Shapes */}
       <motion.div
         className="absolute top-20 right-20 w-32 h-32 md:w-52 md:h-52 lg:w-68 lg:h-68 border border-white/40 rounded-full"
         animate={{ rotate: 360, scale: [1, 1.05, 1] }}
@@ -74,7 +82,7 @@ const Banner = () => {
         transition={{ duration: 4, repeat: Infinity, delay: 1 }}
       />
 
-      {/* Content */}
+      {/* ✅ Content – stays fixed */}
       <div className="relative z-10 pt-16 md:pt-0 container mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -108,23 +116,6 @@ const Banner = () => {
           Empowering Global Students & Partnerships for a Brighter Future
         </motion.p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            onClick={scrollToGlobal}
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="cursor-pointer group px-8 py-4 bg-white text-blue-900 text-center font-semibold rounded-full flex items-center justify-center gap-2"
-          >
-            Explore
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-
-          <button className="cursor-pointer px-8 py-4 rounded-full font-semibold text-white border-2 border-white/30">
-            Learn More
-          </button>
-        </div>
-
-        {/* Scroll */}
         <motion.button
           onClick={scrollToAbout}
           className="absolute md:bottom-[-94px] left-1/2 -translate-x-1/2 text-white/60"

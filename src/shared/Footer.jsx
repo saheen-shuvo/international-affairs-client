@@ -1,5 +1,5 @@
 import { FaFacebookF, FaLink } from "react-icons/fa";
-import iaLogo from "../assets/images/ia_logo.png";
+import iaLogo from "../assets/images/logo/diu-logo.png";
 import { IoIosMail } from "react-icons/io";
 import { MdAddIcCall } from "react-icons/md";
 
