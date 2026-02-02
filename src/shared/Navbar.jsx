@@ -135,7 +135,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar fixed z-90 bg-opacity-30  bg-[#272284] lg:px-4">
+    <div className="navbar fixed z-90 bg-opacity-30  bg-[#002652] lg:px-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div

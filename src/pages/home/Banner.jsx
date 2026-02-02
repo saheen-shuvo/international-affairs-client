@@ -14,7 +14,7 @@ const Banner = () => {
   const scrollToGlobal = () => {
     const section = document.getElementById("global");
     if (section) {
-      const yOffset = -80; 
+      const yOffset = -80;
       const y =
         section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -30,8 +30,9 @@ const Banner = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       />
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-bl from-black/50 via-blue-900 to-black/50" />
+{/* Dark Overlay – dual diagonal gradient */}
+<div className="absolute inset-0 bg-[linear-gradient(to_bottom_left,rgba(0,0,0,0.5),rgba(30,58,138,0.6),rgba(0,0,0,0.5)),linear-gradient(to_top_right,rgba(0,0,0,0.5),rgba(30,58,138,0.6),rgba(0,0,0,0.5))]" />
+
 
       {/* Mesh Pattern */}
       <div
