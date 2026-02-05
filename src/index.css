@@ -16,3 +16,14 @@ html {
   color: white; /* makes text readable */
   text-align: center;
 }
+
+/* Make the elfsight root responsive */
+.elfsight-app-8e59e4fe-0ff0-435e-8502-11d79a7f324c,
+.elfsight-app-8e59e4fe-0ff0-435e-8502-11d79a7f324c * {
+  max-width: 100% !important;
+}
+
+/* Ensure the widget can shrink inside flex/grid */
+.elfsight-app-8e59e4fe-0ff0-435e-8502-11d79a7f324c {
+  width: 100% !important;
+}

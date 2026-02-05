@@ -4,6 +4,7 @@ import Stats from './Stats';
 import AboutUs from './AboutUs';
 import Programs from './Programs';
 import Partnerships from './Partnerships';
+import RecentUpdate from './RecentUpdate';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <Banner></Banner>
             <AboutUs></AboutUs>
             <Stats></Stats>
+            <RecentUpdate></RecentUpdate>
             <Programs></Programs>
             <Partnerships></Partnerships>
         </div>
