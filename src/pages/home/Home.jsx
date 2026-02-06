@@ -6,6 +6,7 @@ import Partnerships from './Partnerships';
 import RecentUpdate from './RecentUpdate';
 import Brochure from './Brochure';
 import Partners from './Partners';
+import ApplyNow from './ApplyNow';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <Brochure></Brochure>
             <Partners></Partners>
             <Partnerships></Partnerships>
+            <ApplyNow></ApplyNow>
         </div>
     );
 };
