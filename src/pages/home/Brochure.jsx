@@ -63,7 +63,7 @@ const BrochuresSection = () => {
   };
 
   return (
-    <section className="w-full mt-8 md:mt-16">
+    <section className="w-full mt-8 md:mt-16 px-2">
       <div className="max-w-screen-xl mx-auto">
         {/* Section Header */}
         <motion.header

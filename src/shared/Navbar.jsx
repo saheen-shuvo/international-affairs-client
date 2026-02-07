@@ -71,9 +71,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/vip">
-                Volunteer Internship Program (VIP)
-              </NavLink>
+              <NavLink to="/vip">Volunteer Internship Program (VIP)</NavLink>
             </li>
             <li>
               <NavLink to="/iip">
@@ -167,7 +165,10 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-1">
           <p className="text-xl font-bold text-green-800"></p>
-          <Link to="/"  className="text-sm md:text-lg font-bold  text-[white] flex items-center">
+          <Link
+            to="/"
+            className="text-sm md:text-lg font-bold  text-[white] flex items-center"
+          >
             {" "}
             <img className="w-8 mr-2" src={iaLogo} alt="" />
             International Affairs, DIU
@@ -177,47 +178,59 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-white">{links}</ul>
       </div>
-      <div className="navbar-end">
-        {user ? (
-          <div className="dropdown dropdown-end px-2">
-            <div tabIndex={0} role="button" className="">
-              <img
-                className="w-8 h-8 lg:w-10 lg:h-10 object-cover rounded-full"
-                src={
-                  user.photoURL || "https://i.ibb.co.com/5xJdrpvg/images.png"
-                }
-                alt="User Avatar"
-              />
-            </div>
-            <div
-              tabIndex={0}
-              className="dropdown-content w-48  bg-base-100 z-[1] p-2 shadow rounded-lg "
-            >
-              <div className="">
-                <h3 className="font-semibold text-center">
-                  {user.displayName || "Unknown User"}
-                </h3>
-                <div className="flex justify-center">
-                  <button
-                    onClick={handleSignOut}
-                    className="btn btn-sm bg-[#757ce1] border-0 text-white border-b-4 border-[#0076b6af] flex items-center gap-2 w-24 my-2"
-                  >
-                    <MdLogout /> <span>Log out</span>
-                  </button>
+      <div className="navbar-end ">
+        {/* //Sign in User Avatar and Dropdown hidden now for all */}
+        <div className="hidden">
+          {user ? (
+            <div className="dropdown dropdown-end px-2">
+              <div tabIndex={0} role="button" className="">
+                <img
+                  className="w-8 h-8 lg:w-10 lg:h-10 object-cover rounded-full"
+                  src={
+                    user.photoURL || "https://i.ibb.co.com/5xJdrpvg/images.png"
+                  }
+                  alt="User Avatar"
+                />
+              </div>
+              <div
+                tabIndex={0}
+                className="dropdown-content w-48  bg-base-100 z-[1] p-2 shadow rounded-lg "
+              >
+                <div className="">
+                  <h3 className="font-semibold text-center">
+                    {user.displayName || "Unknown User"}
+                  </h3>
+                  <div className="flex justify-center">
+                    <button
+                      onClick={handleSignOut}
+                      className="btn btn-sm bg-[#757ce1] border-0 text-white border-b-4 border-[#0076b6af] flex items-center gap-2 w-24 my-2"
+                    >
+                      <MdLogout /> <span>Log out</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ) : (
-          <>
-            <Link to="/signin">
-              {" "}
-              <button className="btn  btn-sm bg-blue-500 hover:bg-blue-600 text-white border-white border-0 border-b-2">
-                Sign in
-              </button>
-            </Link>
-          </>
-        )}
+          ) : (
+            <>
+              <Link to="/signin">
+                {" "}
+                <button className="btn  btn-sm bg-blue-500 hover:bg-blue-600 text-white border-white border-0 border-b-2">
+                  Sign in
+                </button>
+              </Link>
+            </>
+          )}
+        </div>
+        {/* CTA Button - Desktop */}
+        <div className="hidden lg:block">
+          <button
+            // onClick={() => handleNavClick("#contact")}
+            className={`px-4 py-2 rounded-full text-sm transition-all duration-300 bg-white/20 text-white border border-white/30 hover:bg-white/30 backdrop-blur-sm`}
+          >
+            Get Started
+          </button>
+        </div>
       </div>
       {/* Dark - Light Mode */}
       {/* <label className="swap swap-rotate">

@@ -167,7 +167,10 @@ const ApplyNow = () => {
   };
 
   return (
-    <section id="apply" className="max-w-screen-xl mx-auto mt-8 md:mt-16 px-2">
+    <section
+      id="apply"
+      className="max-w-screen-xl mx-auto mt-8 md:mt-16 px-2 overflow-x-hidden"
+    >
       <div className="container mx-auto relative z-10" ref={ref}>
         {/* Header */}
         <motion.div
@@ -189,8 +192,9 @@ const ApplyNow = () => {
           {/* General Apply */}
           <motion.div
             className="flex-1 bg-card rounded-2xl p-8 shadow-lg border border-gray-200"
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="flex items-center gap-3 mb-6">
@@ -342,8 +346,9 @@ const ApplyNow = () => {
           {/* Query Form */}
           <motion.div
             className="flex-1 bg-card rounded-2xl p-8 shadow-lg border border-gray-200"
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="flex items-center gap-3 mb-6">

@@ -49,7 +49,7 @@ const Partnerships = () => {
   return (
     <section
       id="partnerships"
-      className="relative overflow-hidden bg-gradient-to-b from-muted/30 to-background max-w-screen-xl mx-auto mt-8 md:mt-16"
+      className="relative overflow-hidden bg-gradient-to-b from-muted/30 to-background max-w-screen-xl mx-auto mt-8 md:mt-16 px-2"
     >
       {/* Background Pattern */}
       <div
@@ -59,7 +59,7 @@ const Partnerships = () => {
         }}
       />
 
-      <div className="container mx-auto px-6 relative z-10" ref={ref}>
+      <div className="container mx-auto relative z-10" ref={ref}>
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
