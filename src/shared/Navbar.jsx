@@ -134,7 +134,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar fixed z-90 bg-opacity-30  bg-[#002652] lg:px-4">
-      <div className="navbar-start">
+      <div className="navbar-start w-full lg:w-[50%]">
         <div className="dropdown">
           <div
             tabIndex={0}
@@ -178,7 +178,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-white">{links}</ul>
       </div>
-      <div className="navbar-end ">
+      <div className="navbar-end hidden lg:flex">
         {/* //Sign in User Avatar and Dropdown hidden now for all */}
         <div className="hidden">
           {user ? (
